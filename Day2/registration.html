@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="container">
+    <form class="register-form" action="#" method="post">
+
+        <h1>Create Account</h1>
+        <p class="subtitle">Register to get started</p>
+
+        
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                required
+            >
+            <small class="error-message" id="name-error"></small>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required
+            >
+            <small class="error-message" id="email-error"></small>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create a password"
+                autocomplete="new-password"
+                required
+            >
+            <small class="error-message" id="password-error"></small>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                placeholder="Confirm your password"
+                autocomplete="new-password"
+                required
+            >
+            <small class="error-message" id="confirm-password-error"></small>
+        </div>
+
+        
+        <button type="submit" class="register-btn">
+            Create Account
+        </button>
+
+        <!-- Login Navigation -->
+        <p class="login-link">
+            Already have an account?
+            <a href="../Day1/index.html">Login here</a>
+        </p>
+
+    </form>
+</div>
+
+
+</body>
+</html>
