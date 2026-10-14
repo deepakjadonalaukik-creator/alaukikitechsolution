@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Login View -->
+        <section id="login-view" class="form-card">
+            <h1>Welcome Back!</h1>
+            <p class="subtitle">Login to your account</p>
+
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <input
+                        type="email"
+                        id="login-email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input
+                        type="password"
+                        id="login-password"
+                        placeholder="Enter your password"
+                        required
+                    >
+                </div>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <p class="switch-text">
+                Don't have an account?
+                <a href="#register" id="show-register">Register here</a>
+            </p>
+        </section>
+
+        <!-- Registration View -->
+        <section id="register-view" class="form-card" hidden>
+            <h1>Create Account</h1>
+            <p class="subtitle">Register to get started</p>
+
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input
+                        type="text"
+                        id="full-name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="register-email">Email Address</label>
+                    <input
+                        type="email"
+                        id="register-email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input
+                        type="password"
+                        id="register-password"
+                        placeholder="Create a password"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        placeholder="Confirm your password"
+                        required
+                    >
+                </div>
+
+                <button type="submit">Create Account</button>
+            </form>
+
+            <p class="switch-text">
+                Already have an account?
+                <a href="#login" id="show-login">Login here</a>
+            </p>
+        </section>
+
+    </div>
+
+</body>
+</html>
