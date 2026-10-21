@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task List Interface</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <p class="subtitle">MY WORKSPACE</p>
+                <h1>My Tasks <span>✦</span></h1>
+                <p class="description">
+                    Organize your work and get things done.
+                </p>
+            </div>
+
+            <button class="add-btn" id="addTaskBtn">
+                <span>+</span> Add Task
+            </button>
+        </header>
+
+
+        <!-- Task Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <div class="stat-icon total-icon">▦</div>
+                <div>
+                    <p>Total Tasks</p>
+                    <h2 id="totalTasks">4</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon pending-icon">◷</div>
+                <div>
+                    <p>Pending</p>
+                    <h2 id="pendingTasks">2</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon completed-icon">✓</div>
+                <div>
+                    <p>Completed</p>
+                    <h2 id="completedTasks">2</h2>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Task List Header -->
+        <section class="task-section">
+
+            <div class="section-header">
+                <div>
+                    <h2>Task Overview</h2>
+                    <p>Manage your daily activities.</p>
+                </div>
+
+                <select id="filterTasks" aria-label="Filter tasks">
+                    <option value="all">All Tasks</option>
+                    <option value="pending">Pending</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+
+
+            <!-- Task Cards -->
+            <div class="task-list" id="taskList">
+
+                <article class="task-card" data-status="pending">
+                    <div class="task-card-top">
+                        <span class="task-category purple">Development</span>
+                        <span class="status pending">Pending</span>
+                    </div>
+
+                    <h3>Complete HTML & CSS</h3>
+
+                    <p class="task-description">
+                        Build the basic structure and style the web pages
+                        using HTML and CSS.
+                    </p>
+
+                    <div class="task-footer">
+                        <span class="task-date">📅 Today</span>
+
+                        <div class="task-actions">
+                            <button class="complete-btn">
+                                ✓ Complete
+                            </button>
+
+                            <button class="delete-btn" aria-label="Delete task">
+                                🗑
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="task-card" data-status="pending">
+                    <div class="task-card-top">
+                        <span class="task-category blue">JavaScript</span>
+                        <span class="status pending">Pending</span>
+                    </div>
+
+                    <h3>Practice JavaScript</h3>
+
+                    <p class="task-description">
+                        Revise variables, functions, events and DOM
+                        manipulation.
+                    </p>
+
+                    <div class="task-footer">
+                        <span class="task-date">📅 Today</span>
+
+                        <div class="task-actions">
+                            <button class="complete-btn">
+                                ✓ Complete
+                            </button>
+
+                            <button class="delete-btn" aria-label="Delete task">
+                                🗑
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="task-card" data-status="completed">
+                    <div class="task-card-top">
+                        <span class="task-category orange">Design</span>
+                        <span class="status completed">Completed</span>
+                    </div>
+
+                    <h3>Design Dashboard UI</h3>
+
+                    <p class="task-description">
+                        Create a clean dashboard layout with cards
+                        and sidebar navigation.
+                    </p>
+
+                    <div class="task-footer">
+                        <span class="task-date">📅 Yesterday</span>
+
+                        <div class="task-actions">
+                            <button class="complete-btn undo-btn">
+                                ↶ Undo
+                            </button>
+
+                            <button class="delete-btn" aria-label="Delete task">
+                                🗑
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="task-card" data-status="completed">
+                    <div class="task-card-top">
+                        <span class="task-category green">Learning</span>
+                        <span class="status completed">Completed</span>
+                    </div>
+
+                    <h3>Revise Form Validation</h3>
+
+                    <p class="task-description">
+                        Implement email validation, password checks
+                        and inline error messages.
+                    </p>
+
+                    <div class="task-footer">
+                        <span class="task-date">📅 Yesterday</span>
+
+                        <div class="task-actions">
+                            <button class="complete-btn undo-btn">
+                                ↶ Undo
+                            </button>
+
+                            <button class="delete-btn" aria-label="Delete task">
+                                🗑
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="empty-message" id="emptyMessage" hidden>
+                No tasks found. Click "Add Task" to create one!
+            </p>
+
+        </section>
+
+
+        <!-- Add Task Modal -->
+        <div class="modal" id="taskModal" hidden>
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <div>
+                        <h2>Add New Task</h2>
+                        <p>Enter the details of your task.</p>
+                    </div>
+
+                    <button class="close-btn" id="closeModal"
+                            aria-label="Close form">
+                        &times;
+                    </button>
+                </div>
+
+                <form id="taskForm">
+
+                    <div class="form-group">
+                        <label for="taskTitle">Task Title</label>
+                        <input
+                            type="text"
+                            id="taskTitle"
+                            placeholder="e.g. Learn JavaScript"
+                            required
+                            maxlength="100"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="taskDescription">Description</label>
+                        <textarea
+                            id="taskDescription"
+                            placeholder="Describe your task..."
+                            rows="4"
+                            required
+                            maxlength="500"
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="taskCategory">Category</label>
+                        <select id="taskCategory">
+                            <option value="Development">Development</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="Design">Design</option>
+                            <option value="Learning">Learning</option>
+                            <option value="Personal">Personal</option>
+                        </select>
+                    </div>
+
+                    <p class="form-error" id="formError" role="alert"></p>
+
+                    <div class="modal-actions">
+                        <button type="button" class="cancel-btn"
+                                id="cancelBtn">
+                            Cancel
+                        </button>
+
+                        <button type="submit" class="add-btn">
+                            Create Task
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <p>© 2026 TaskFlow | Day 6 Project</p>
+            <p>Built with HTML, CSS & JavaScript</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
