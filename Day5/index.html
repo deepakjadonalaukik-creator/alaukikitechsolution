@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard UI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+
+            <div class="logo">
+                <span class="logo-icon">✦</span>
+                <h2>TaskFlow</h2>
+            </div>
+
+            <p class="menu-title">MAIN MENU</p>
+
+            <nav class="navigation">
+                <a href="#dashboard" class="nav-link active">
+                    <span>▦</span>
+                    Dashboard
+                </a>
+
+                <a href="#tasks" class="nav-link">
+                    <span>✓</span>
+                    Tasks
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="profile">
+                    <div class="avatar">U</div>
+                    <div>
+                        <h4>My Profile</h4>
+                        <p>Welcome back!</p>
+                    </div>
+                </div>
+
+                <button class="logout-btn" id="logoutBtn">
+                    <span>↪</span>
+                    Logout
+                </button>
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content" id="dashboard">
+
+            <!-- Top Header -->
+            <header class="topbar">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"
+                            aria-label="Toggle sidebar">
+                        ☰
+                    </button>
+
+                    <div>
+                        <p class="breadcrumb">Pages / Dashboard</p>
+                        <h3>Dashboard</h3>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <span class="status-dot"></span>
+                    <span>Online</span>
+                    <div class="avatar small-avatar">U</div>
+                </div>
+            </header>
+
+
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <div>
+                    <p class="welcome-label">YOUR WORKSPACE</p>
+
+                    <h1>Welcome back! 👋</h1>
+
+                    <p class="welcome-text">
+                        Here's what's happening with your tasks today.
+                    </p>
+                </div>
+
+                <div class="welcome-date" id="currentDate"></div>
+            </section>
+
+
+            <!-- Statistics Cards -->
+            <section class="stats-grid">
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon purple">▦</span>
+                        <span class="stat-label">Total Tasks</span>
+                    </div>
+
+                    <h2>24</h2>
+
+                    <p class="stat-description">
+                        <span class="highlight">+4</span>
+                        tasks this week
+                    </p>
+                </article>
+
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon blue">◷</span>
+                        <span class="stat-label">In Progress</span>
+                    </div>
+
+                    <h2>08</h2>
+
+                    <p class="stat-description">
+                        Currently being worked on
+                    </p>
+                </article>
+
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon green">✓</span>
+                        <span class="stat-label">Completed</span>
+                    </div>
+
+                    <h2>12</h2>
+
+                    <p class="stat-description">
+                        <span class="highlight">50%</span>
+                        of all tasks
+                    </p>
+                </article>
+
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon orange">⌛</span>
+                        <span class="stat-label">Pending</span>
+                    </div>
+
+                    <h2>04</h2>
+
+                    <p class="stat-description">
+                        Tasks waiting to start
+                    </p>
+                </article>
+
+            </section>
+
+
+            <!-- Recent Tasks Section -->
+            <section class="tasks-section" id="tasks">
+
+                <div class="section-header">
+                    <div>
+                        <h2>Recent Tasks</h2>
+                        <p class="section-description">
+                            Keep track of your latest activities.
+                        </p>
+                    </div>
+
+                    <button class="view-btn" id="viewAllBtn">
+                        View All →
+                    </button>
+                </div>
+
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>TASK NAME</th>
+                                <th>DATE</th>
+                                <th>PRIORITY</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="task-dot dot-purple"></span>
+                                    Design Dashboard UI
+                                </td>
+                                <td>Oct 16, 2026</td>
+                                <td>
+                                    <span class="priority high">High</span>
+                                </td>
+                                <td>
+                                    <span class="badge completed">Completed</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span class="task-dot dot-blue"></span>
+                                    Form Validation
+                                </td>
+                                <td>Oct 17, 2026</td>
+                                <td>
+                                    <span class="priority medium">Medium</span>
+                                </td>
+                                <td>
+                                    <span class="badge progress">In Progress</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span class="task-dot dot-orange"></span>
+                                    Create Landing Page
+                                </td>
+                                <td>Oct 18, 2026</td>
+                                <td>
+                                    <span class="priority high">High</span>
+                                </td>
+                                <td>
+                                    <span class="badge pending">Pending</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span class="task-dot dot-green"></span>
+                                    Review Project Code
+                                </td>
+                                <td>Oct 19, 2026</td>
+                                <td>
+                                    <span class="priority low">Low</span>
+                                </td>
+                                <td>
+                                    <span class="badge completed">Completed</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>© 2026 TaskFlow Dashboard</p>
+                <p>Built with HTML, CSS & JavaScript</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
