@@ -1,0 +1,81 @@
+# Day 12: Express Routing (Basic APIs)
+
+## About
+
+Today I worked on Express.js routing and created basic API endpoints. I learned how to handle GET and POST requests and return responses in JSON format.
+
+## Tasks Completed
+
+* Created basic API routes using Express.js.
+* Implemented GET `/` to return a welcome message.
+* Implemented GET `/tasks` to return a list of tasks.
+* Implemented POST `/tasks` to create a new task.
+* Used middleware to handle JSON request data.
+* Tested the APIs using a browser and Postman.
+
+## Technologies Used
+
+* Node.js
+* Express.js
+* JavaScript
+* JSON
+* Postman
+
+## API Endpoints
+
+### 1. GET /
+
+Returns a welcome message.
+
+URL: `http://localhost:3000/`
+
+### 2. GET /tasks
+
+Returns a list of tasks in JSON format.
+
+URL: `http://localhost:3000/tasks`
+
+### 3. POST /tasks
+
+Creates a new task using the request body.
+
+URL: `http://localhost:3000/tasks`
+
+Example request body:
+
+```json
+{
+  "title": "Learn Express.js"
+}
+```
+
+## How to Run the Project
+
+1. Install the required dependencies:
+
+   ```bash
+   npm install express
+   ```
+
+2. Start the server:
+
+   ```bash
+   node server.js
+   ```
+
+3. Open `http://localhost:3000/` in your browser to test the welcome route.
+
+4. Use Postman to test the GET and POST API endpoints.
+
+## What I Learned
+
+* Basics of Express.js routing.
+* How to create GET and POST routes.
+* How to send JSON responses.
+* How to use Express middleware.
+* How to handle request data.
+* How to test API endpoints using Postman.
+
+## Conclusion
+
+Successfully completed Day 12 by creating basic APIs using Express.js and learning about routing, middleware, and JSON responses.
