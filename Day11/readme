@@ -1,0 +1,63 @@
+# Day 11: Node.js Project Setup and Basic Server
+
+## About
+
+Today I started working on the backend using Node.js and Express.js. I created a basic server and learned how to run it locally.
+
+## Tasks Completed
+
+* Initialized the project using `npm init`.
+* Created a `server.js` file.
+* Installed Express.js.
+* Created a basic server using Express.
+* Ran the server on port 5000.
+* Tested the server in the browser.
+
+## Technologies Used
+
+* Node.js
+* Express.js
+* JavaScript
+* npm
+
+## How to Run the Project
+
+1. Install Node.js on your system.
+
+2. Initialize the project:
+
+   ```bash
+   npm init -y
+   ```
+
+3. Install Express:
+
+   ```bash
+   npm install express
+   ```
+
+4. Run the server:
+
+   ```bash
+   node server.js
+   ```
+
+5. Open the following URL in your browser:
+
+   `http://localhost:5000`
+
+## Output
+
+The server runs successfully and displays a welcome message in the browser.
+
+## What I Learned
+
+* Basics of Node.js.
+* How to initialize a project using npm.
+* How to use Express.js.
+* How to create and run a basic server.
+* How to test a server locally.
+
+## Conclusion
+
+Successfully completed Day 11 by setting up a Node.js project and creating a basic Express server.
